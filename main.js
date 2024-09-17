@@ -6,7 +6,7 @@ let newHTML= ``;
 
 featuredGuests.map((guestObj)=>{
     
-    let imgHTML;
+    let imgHTML ='';
     guestObj.imgURL.forEach((url)=>{
         imgHTML += 
         `
@@ -14,6 +14,7 @@ featuredGuests.map((guestObj)=>{
         `;
     })
     let htmlToInject;
+    console.log('imghtml: ', imgHTML)
     htmlToInject = `
         <div class="feat-wrapper">
         <div class="info-wrapper">
