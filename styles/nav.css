@@ -1,0 +1,14 @@
+nav {
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    background-color: #262626;
+    color: white;
+    display: flex;
+    position: sticky;
+    top:0;
+}
+
+nav a {
+    padding: 1rem;
+    font-size: 2rem;
+}
