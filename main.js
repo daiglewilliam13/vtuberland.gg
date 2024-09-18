@@ -10,23 +10,21 @@ featuredGuests.map((guestObj)=>{
     guestObj.imgURL.forEach((url)=>{
         imgHTML += 
         `
-        <img height="500px" src="${url}" alt="">
+        <img class="images" width="600px" src="${url}" alt="">
         `;
     })
     let htmlToInject;
     console.log('imghtml: ', imgHTML)
     htmlToInject = `
-        <div class="feat-wrapper">
+    <div class="feat-wrapper">
         <div class="info-wrapper">
            <h2>${guestObj.panelName}</h2>
            <p>${guestObj.panelDesc}</p>
         </div>
-        <div class="images">
            ${imgHTML}
-           </div>
-        </div>
+    </div>
     `
     newHTML += htmlToInject;
 })
 
-featuredSection.innerHTML = newHTML;
+featuredSection.innerHTML += newHTML;

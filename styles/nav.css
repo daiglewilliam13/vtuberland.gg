@@ -13,4 +13,9 @@ nav {
 nav a {
     padding: 1rem 1rem;
     font-size: clamp(1rem, 5vw, 2rem);
+    color: white;
+}
+
+nav a:visited {
+    color: white;
 }

@@ -3,6 +3,16 @@ html, body {
     box-sizing: border-box;
 }
 
+a {
+ color:#001f7d;
+}
+
+a:visited {
+    color:#bfcfff;
+}
+
+
+
 /* hero section */
 
 #hero {
@@ -29,29 +39,67 @@ html, body {
 #hero h1 {
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
-    font-size: 5rem;
+    font-size: clamp(3rem, 10vw, 5rem);
     color: white;
     text-align: center;
 }
 
 #hero img {
     width:100%;
-    max-width: 800px;
+    max-width: 900px;
     object-fit: contain;
     object-position: bottom;
 
 }
 #hero #vtube-logo {
-    padding-top: 5rem;
+    padding-top: 7rem;
     width: 100%;
     max-width: 700px;
 }
+/* about */
+
+#about {
+    display: flex;
+    margin: 3px;
+    justify-content: space-evenly;
+    padding: 5rem 1rem;
+    flex-wrap: wrap;
+    border: 2px solid #262626;
+}
+
+#about h2 {
+    margin: 0;
+    font-size: clamp(3rem, 10vw, 5rem);
+    width: 100%;
+    max-width: 600px;
+    text-align:center;
+
+}
+
+#about p {
+    width: 100%;
+    max-width: 600px;
+
+    font-size: 1.5rem;
+}
+
 /* featured guests */
 
 
-.info-wrapper h2 {
+h2, h1 {
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
+}
+
+#featured h2 {
+    margin:0;
+}
+#featured h1 {
+    font-size: 4rem;
+    background: #262626;
+    color: white;
+    padding: 5rem 2rem;
+    margin: 0;
 }
 
 p {
@@ -59,6 +107,33 @@ p {
     font-weight: 400;
 }
 
+#featured .feat-wrapper:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #001f7d;
+    color: white
+}
+
+#features .feat-wrapper:nth-child(odd) {
+
+}
+
+#featured .feat-wrapper {
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.feat-wrapper .info-wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 5rem 3rem;
+}
+
+.feat-wrapper .images {
+    width: 100%;
+    max-width: 600px;
+    
+}
 
 /* keyframes */
 
