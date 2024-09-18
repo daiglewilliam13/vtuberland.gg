@@ -18,7 +18,8 @@ featuredGuests.map((guestObj)=>{
     htmlToInject = `
     <div class="feat-wrapper">
         <div class="info-wrapper">
-           <h2>${guestObj.panelName}</h2>
+            <div class='bg-filter'></div>
+           <h2>Panel: ${guestObj.panelName}</h2>
            <p>${guestObj.panelDesc}</p>
         </div>
            ${imgHTML}
