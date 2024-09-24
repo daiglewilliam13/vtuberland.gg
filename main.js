@@ -27,6 +27,7 @@ featuredGuests.map((guestObj)=>{
     console.log('imghtml: ', imgHTML)
     htmlToInject = `
     <div class="feat-wrapper">
+        ${imgHTML}
         <div class="info-wrapper">
             <div class='bg-filter'></div>
            <h2>${guestObj.panelName}</h2>
@@ -34,7 +35,6 @@ featuredGuests.map((guestObj)=>{
            <p>Featuring: ${nameList}</p>
            <p><a class="cta-button" href="">Check back soon for details!</a>
         </div>
-           ${imgHTML}
     </div>
     `
     newHTML += htmlToInject;
