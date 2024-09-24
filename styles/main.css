@@ -202,10 +202,10 @@ p {
 
 @media screen and (min-width: 1200px) {
     #hero .description {
-        max-width: 50rem;
+        max-width: 35rem;
     }
     
     #hero img {
-        max-width: 50rem;
+        max-width: 40rem;
     }
 }
