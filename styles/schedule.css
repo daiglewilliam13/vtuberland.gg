@@ -1,3 +1,32 @@
+#schedule-page h1, h2 {
+    color:white;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 10px #262626;
+    width: 100%;
+}
+
 #schedule-page h1 {
-    font-size: 3rem;
+    font-size:3rem;
+}
+#schedule-page h2 {
+    font-size:2rem;
+}
+
+#flyer {
+    position: relative;
+    z-index: 2;
+    margin: 2rem auto;
+    box-shadow: 2px 2px 25px -5px #262626;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+#schedule-page {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
