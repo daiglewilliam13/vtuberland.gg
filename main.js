@@ -10,7 +10,7 @@ featuredGuests.map((guestObj)=>{
     guestObj.imgURL.forEach((url)=>{
         imgHTML += 
         `
-        <img class="images" width="300px" src="${url}" alt="">
+        <img class="images" width="300px" src="../${url}" alt="">
         `;
     })
     let nameList = '';
@@ -49,7 +49,7 @@ let featImgs = Array.from(document.getElementsByClassName('images'));
 
 featImgs.forEach((img)=>{
     console.log(img)
-    if (img.src=="images/kira.png") {
+    if (img.src=="https://www.tsumicon.com/hou/vtuberland/images/kira.png") {
         console.log('found')
         img.style.transform='scale(1.5)'
     }
