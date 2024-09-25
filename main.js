@@ -10,7 +10,7 @@ featuredGuests.map((guestObj)=>{
     guestObj.imgURL.forEach((url)=>{
         imgHTML += 
         `
-        <img class="images" width="600px" src="${url}" alt="">
+        <img class="images" width="300px" src="${url}" alt="">
         `;
     })
     let nameList = '';
@@ -27,13 +27,15 @@ featuredGuests.map((guestObj)=>{
     console.log('imghtml: ', imgHTML)
     htmlToInject = `
     <div class="feat-wrapper">
-        ${imgHTML}
-        <div class="info-wrapper">
-            <div class='bg-filter'></div>
-           <h2>${guestObj.panelName}</h2>
-           <p>${guestObj.panelDesc}</p>
-           <p>Featuring: ${nameList}</p>
-           <p><a class="cta-button" href="">Check back soon for details!</a>
+        <div>
+    ${imgHTML}
+    </div>
+    <div class="info-wrapper">
+        <h2>${guestObj.panelName}</h2>
+        <p class="guest-name">Featuring: ${nameList}</p>
+        <p>${guestObj.panelDesc}</p>
+        <br>
+        <p><a class="cta-button" href="">Check back soon for details!</a>
         </div>
     </div>
     `
@@ -41,3 +43,16 @@ featuredGuests.map((guestObj)=>{
 })
 
 featuredSection.innerHTML += newHTML;
+
+let featImgs = Array.from(document.getElementsByClassName('images'));
+
+
+featImgs.forEach((img)=>{
+    console.log(img)
+    if (img.src=="images/kira.png") {
+        console.log('found')
+        img.style.transform='scale(1.5)'
+    }
+})
+
+

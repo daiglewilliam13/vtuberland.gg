@@ -7,7 +7,8 @@ nav {
     position: sticky;
     top:0;
     z-index: 3;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 nav a {
@@ -18,4 +19,16 @@ nav a {
 
 nav a:visited {
     color: white;
+}
+
+nav img {
+    height: 32px;
+    padding-top: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    nav img {
+        height: 64px;
+        padding-top: .5rem;
+    }
 }

@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 a {
@@ -11,6 +12,12 @@ a:visited {
     color:#bfcfff;
 }
 
+#main-wrapper {
+    height: 100vh;
+    overflow: scroll;
+    background: rgb(239,66,250);
+    background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90%);
+}
 
 
 /* hero section */
@@ -19,8 +26,7 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: rgb(239,66,250);
-background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90%);
+
     position: relative;
     z-index: 2;
 }
@@ -32,7 +38,7 @@ background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90
     background: url('../images/background\ pattern-small.png');
     background-repeat: repeat;
     opacity: .4;
-    z-index:-1;
+    z-index:0;
     animation: scrolling 30s linear infinite;
 }
 
@@ -43,7 +49,7 @@ background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90
 }
 
 #hero h1 {
-    font-family: 'Kanit', sans-serif;
+    font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-size: clamp(1.5rem, 10vw, 4rem);
     color: white;
@@ -92,23 +98,11 @@ background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90
 /* featured guests */
 
 #featured {
-    background: rgb(239,66,250);
-    background: linear-gradient(20deg, rgba(239,66,250,1) 10%, rgba(12,248,247,1) 90%);
     position: relative;
     display: flex;
     flex-wrap: wrap;
 }
 
-#featured::before {
-    content:'';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('../images/checkerbg.png');
-    opacity: .1;
-    animation: scrolling 30s linear infinite reverse;
-
-}
 
 h2, h1 {
     font-family: 'Kanit', sans-serif;
@@ -126,6 +120,7 @@ h2, h1 {
     color: white;
     padding: 5rem 2rem;
     margin: 0;
+    margin-bottom: 10rem;
     position: relative;
     z-index:2;
     width: 100%;
@@ -135,55 +130,75 @@ p {
     font-family: 'Exo', sans-serif;
     font-weight: 400;
     font-size:1rem;
+
 }
 
 
 #featured .feat-wrapper {
-    justify-content: center;
     display:flex;
+    justify-content: space-evenly;
     flex-wrap:wrap;
     position: relative;
     z-index: 2;
-    width: 90%;
-    max-width: 40rem;
-    margin: 1rem auto;
-    padding: 1rem;
+    width: 100%;
+    margin: 6rem auto;
+    overflow:visible;
     background-color: white;
-    border-radius: 5px;
     box-shadow: 2px 2px 10px #262626;
 }
 
-.feat-wrapper .info-wrapper {
-    width: 100%;
-    max-width: 600px;
-    padding: 4rem 3rem;
-    height: auto;
+#featured .feat-wrapper:nth-of-type(even) {
+    flex-direction: row-reverse;
+
 }
 
+
+.feat-wrapper .info-wrapper {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    padding: 6rem .5rem;
+ 
+
+}
+.feat-wrapper div {
+    width: 100%;
+    max-width: 40rem;
+    position: relative;
+}
 .feat-wrapper .images {
     width: 100%;
-    max-width: 800px;
-    object-position: bottom;
+    max-width: 600px;
+    position: absolute;
+    bottom: 0%;
     object-fit: contain;
-    border: 2px solid #262626;
-    border-radius: 3px;
+    transform-origin: bottom;
 }
+
+
 
 .feat-wrapper a.cta-button {
     background-color: #262626;
     padding: 1rem;
-    border: 1px solid white;
+    padding-top: 1rem;
+}
+
+.feat-wrapper .guest-name {
+    font-style: italic;
 }
 
 
 /* footer */
 
 #footer {
-    height: 10rem;
     background-color: #262626;
     color: white;
     text-align: center;
     padding: 4rem;
+    position: relative;
+    z-index: 2;
     
 }
 
@@ -194,6 +209,21 @@ p {
 #footer .footer-icon {
     padding: 0 .5rem;
 }
+
+
+/* meets */
+
+#meets h1 {
+    background-color: #262626;
+    font-size: 4rem;
+    padding: 5rem 0;
+    text-align: center;
+    position:relative;
+    z-index: 2;
+    margin-bottom: 5rem;
+    color: white;
+}
+
 /* keyframes */
 
 @keyframes scrolling {
@@ -215,6 +245,11 @@ p {
     }
     
     #hero img {
-        max-width: 40rem;
+        max-width: 45rem;
     }
+
+    .feat-wrapper .info-wrapper {
+        padding: 2rem;
+    }
+
 }
