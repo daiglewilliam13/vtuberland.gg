@@ -31,7 +31,7 @@ featuredGuests.map((guestObj)=>{
     ${imgHTML}
     </div>
     <div class="info-wrapper">
-        <h2>${guestObj.panelName}</h2>
+        <h2>${nameList}</h2>
         <p class="guest-name">Featuring: ${nameList}</p>
         <p>${guestObj.panelDesc}</p>
         <br>
