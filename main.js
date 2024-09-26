@@ -32,7 +32,7 @@ featuredGuests.map((guestObj)=>{
     </div>
     <div class="info-wrapper">
         <h2>${nameList}</h2>
-        <p class="guest-name">Panel: ${guestObj.panelName}</p>
+        <p class="guest-name">${guestObj.panelName}</p>
         <p>${guestObj.panelDesc}</p>
         <br>
         <p><a class="cta-button" href="">Check back soon for details!</a>
