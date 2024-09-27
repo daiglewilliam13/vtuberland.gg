@@ -7,15 +7,17 @@ nav {
     color: white;
     display: flex;
     position: sticky;
+    flex-wrap: wrap;
     top:0;
     z-index: 3;
     padding: 1rem;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 nav a {
-    padding: 1rem 1rem;
-    font-size: clamp(1rem, 5vw, 2rem);
+    padding: .5rem;
+    font-size: clamp(.5rem, 5vw, 2rem);
     color: white;
     text-decoration: none;
 }
@@ -26,12 +28,27 @@ nav a:visited {
 
 nav img {
     height: 32px;
-    padding-top: 1rem;
+    padding-top: .5rem;
+}
+
+.badge-button {
+    color: white;
+    background: rgb(239,66,250);
+    background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90%);
+    font-size: 1rem;
+    margin: 1rem 3rem;
+    text-shadow: 2px 2px 10px #262626;
+    width: 100%;
+    max-width: 10rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
     nav img {
         height: 64px;
         padding-top: .5rem;
+    }
+    .badge-button {
+        margin-left: auto;
     }
 }

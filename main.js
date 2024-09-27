@@ -47,12 +47,4 @@ featuredSection.innerHTML += newHTML;
 let featImgs = Array.from(document.getElementsByClassName('images'));
 
 
-featImgs.forEach((img)=>{
-    console.log(img)
-    if (img.src=="https://www.tsumicon.com/hou/vtuberland/images/kira.png") {
-        console.log('found')
-        img.style.transform='scale(1.5)'
-    }
-})
-
 
