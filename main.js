@@ -1,4 +1,5 @@
 import {featuredGuests} from './images/data.js';
+import { files } from './images/mng/list.js';
 
 let featuredSection = document.getElementById('featured');
 
@@ -24,7 +25,6 @@ featuredGuests.map((guestObj)=>{
         
     })
     let htmlToInject;
-    console.log('imghtml: ', imgHTML)
     htmlToInject = `
     <div class="feat-wrapper">
         <div>
@@ -42,9 +42,18 @@ featuredGuests.map((guestObj)=>{
     newHTML += htmlToInject;
 })
 
+
+//meet n greet images
+
+let meetSection = document.getElementsByClassName('guest-wrapper')[0];
+let meetImages = "";
+
+files.forEach((file)=>{
+    let baseURL = "https://s3.us-west-1.amazonaws.com/tsumicon.com/hou/vtuberland/images/mng/";
+    let imgHTML = `<img src="${baseURL}${file}" class="meet-card" width="600px">`
+    meetImages += imgHTML;
+})
+
+meetSection.innerHTML=meetImages;
 featuredSection.innerHTML += newHTML;
-
-let featImgs = Array.from(document.getElementsByClassName('images'));
-
-
 
