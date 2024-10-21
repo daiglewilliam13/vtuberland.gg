@@ -35,7 +35,7 @@ featuredGuests.map((guestObj)=>{
         <p class="guest-name">${guestObj.panelName}</p>
         <p>${guestObj.panelDesc}</p>
         <br>
-        <p><a class="cta-button" href="">Check back soon for details!</a>
+        <p class="panel-details">Where: ${guestObj.panelRoom} </p> <p class="panel-details"> When: ${guestObj.panelTime}</p>
         </div>
     </div>
     `

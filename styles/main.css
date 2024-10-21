@@ -217,10 +217,11 @@ p {
 
 
 
-.feat-wrapper a.cta-button {
+.feat-wrapper p.panel-details {
     background-color: #262626;
     padding: 1rem;
-    padding-top: 1rem;
+    color: rgba(12,248,247,1);
+    margin:0;
 }
 
 .feat-wrapper .guest-name {
