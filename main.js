@@ -30,10 +30,12 @@ async function getList(url, storageName) {
                     <div class="panel-wrapper">
                     <img class="panel" src="${vidURL}">
                     <div class="info-wrapper">
-                    <h2>${item.title}</h2>
+                    <h2>${item.vtuber}</h2>
+                    <p>Panel: ${item.title}
                     <p>${item.description}</p> 
-                    <p>Where: ${item.room} </p> <p> When: ${item. day} ${item.time}</p>
-                    <p>Hosted by: ${item.vtuber}</p>
+                    <br>
+                    <p>${item.room}</p>
+                    <p>${item.day} ${item.time}</p>
                     </div>
                     </div>
                     `

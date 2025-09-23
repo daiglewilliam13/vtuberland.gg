@@ -1,22 +1,38 @@
-html, body {
+@font-face {
+    font-family: "ROG";
+    src: url(/fonts/ROGFONTS-REGULAR.OTF);
+}
+
+@font-face {
+    font-family: 'agency-regular';
+    src: url(/fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: 'agency-bold';
+    src: url(/fonts/AGENCYB.TTF);
+}
+
+html,
+body {
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 a {
- color:#001f7d;
+    color: #001f7d;
 }
 
 a:visited {
-    color:#bfcfff;
+    color: #bfcfff;
 }
 
 #main-wrapper {
     height: 100vh;
     overflow: scroll;
-    background: rgb(239,66,250);
-    background: linear-gradient(20deg, rgba(239,66,250,1) 20%, rgba(12,248,247,1) 90%);
+    background: rgb(239, 66, 250);
+    background: linear-gradient(20deg, rgba(239, 66, 250, 1) 20%, rgba(12, 248, 247, 1) 90%);
 }
 
 
@@ -38,7 +54,7 @@ a:visited {
     background: url('../images/background\ pattern-small.png');
     background-repeat: repeat;
     opacity: .4;
-    z-index:0;
+    z-index: 0;
     animation: scrolling 30s linear infinite;
 }
 
@@ -52,9 +68,8 @@ a:visited {
 
 
 #hero h1 {
-    font-family: "Audiowide", sans-serif;
-    font-weight: 400;
-    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-family: "ROG";
+    font-size: clamp(1.5rem, 10vw, 2.5rem);
     color: white;
     text-shadow: 2px 2px 10px #262626;
     text-align: center;
@@ -80,34 +95,37 @@ a:visited {
 .panel-wrapper {
     display: flex;
     position: relative;
-    z-index:2;
+    z-index: 2;
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .panel-wrapper img {
-    width: 100%;
+    width: 70%;
+    max-height: 600px;
     object-fit: contain;
     object-position: bottom;
     position: relative;
     z-index: 1;
+    margin: 0 auto;
 }
 
 .info-wrapper {
     position: relative;
-    z-index:3;
+    z-index: 3;
     color: white;
     text-align: center;
     margin: 0 auto;
     background-color: black;
     width: 100%;
-    border: 2px solid white;
+    padding: 3rem 0;
 }
 
-.info-wrapper p{
+.info-wrapper p {
     margin: 0;
-    padding: .5rem 0;
+
 }
 
 
@@ -122,21 +140,24 @@ a:visited {
     margin: 0 auto;
     justify-content: space-evenly;
 }
+
 #featured h1 {
     width: 100%;
 }
 
 
-h2, h1 {
-    font-family: 'audiowide';
+h2,
+h1 {
+    font-family: 'ROG';
     font-weight: 400;
 }
 
 #featured h2 {
     font-size: 2rem;
-    margin:0;
+    margin: 0;
     text-decoration: underline;
 }
+
 h1 {
     font-size: 4rem;
     text-align: center;
@@ -145,7 +166,7 @@ h1 {
     text-shadow: 2px 2px 10px #262626;
     margin: 0 auto;
     position: relative;
-    z-index:2;
+    z-index: 2;
 }
 
 
@@ -156,10 +177,8 @@ h1 {
 }
 
 p {
-    font-family: 'audiowide', sans-serif;
-    font-weight: 100;
-    font-size:1.2rem;
-
+    font-family: 'agency-regular';
+    font-size: 2rem;
 }
 
 
@@ -169,7 +188,7 @@ p {
     margin-bottom: 8rem;
 }
 
- h2 {
+h2 {
     color: white;
     margin: 0 auto;
     position: relative;
@@ -180,10 +199,10 @@ p {
 
 #meets .guest-wrapper {
     background-color: #262626;
-    position:relative;
+    position: relative;
     z-index: 2;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 5rem .5rem;
 }
@@ -208,15 +227,16 @@ p {
     bottom: 0;
 }
 
-#footer p  {
-    font-size: 1.2rem; 
+#footer p {
+    font-size: 1.2rem;
 }
 
 #footer .footer-icon {
     padding: 0 .5rem;
 }
+
 #anchor {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
@@ -228,14 +248,16 @@ p {
     color: white;
     padding: 1rem 0;
 }
+
 #anchor p {
     font-weight: 100;
-    font-size:1rem;
+    font-size: 1.2rem;
     margin: 0 1rem;
     align-self: center;
     text-align: center;
     width: 100%;
 }
+
 #anchor div {
     display: flex;
     justify-content: center;
@@ -262,6 +284,7 @@ p {
     line-height: 50px;
 
 }
+
 .spacer {
     background-color: black;
     width: 100%;
@@ -269,15 +292,18 @@ p {
     position: relative;
     z-index: 1;
 }
+
 /* keyframes */
 
 @keyframes scrolling {
     from {
         background-position: 0 0;
-    } to {
+    }
+
+    to {
         background-position: 500px -500px;
     }
-    
+
 }
 
 
@@ -289,12 +315,13 @@ p {
         max-width: 40rem;
         padding: 1rem 0;
     }
-    
+
     #hero img {
-        position:relative;
+        position: relative;
         max-width: 55rem;
         padding-top: 5rem;
     }
+
     .info-wrapper {
         position: absolute;
         right: 0;
@@ -303,7 +330,19 @@ p {
         height: 50%;
         border: none;
         background: none;
-        padding-top: 2rem;
     }
+
+    .panel-wrapper {
+        background: 000000;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 0%);
+        padding: 4rem 0;
+    }
+
+    .panel-wrapper img {
+        margin: 0;
+        margin-bottom: -4rem;
+        transform: translateX(-10%);
+    }
+
 
 }
