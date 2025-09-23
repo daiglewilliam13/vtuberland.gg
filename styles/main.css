@@ -276,14 +276,27 @@ h2 {
     width: 100%;
     text-align: center;
     padding-top: .5rem;
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
-.logos span {
+.logos span, .logos p{
     font-family: 'audiowide';
     text-align: center;
     color: white;
     display: inline-block;
 
+}
+
+.logos span {
+    width: 100%;
+}
+
+.logos p {
+    margin: 0 .5rem;
 }
 
 #presents {
