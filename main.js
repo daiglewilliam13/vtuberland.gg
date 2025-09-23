@@ -42,12 +42,6 @@ async function getList(url, storageName) {
 
             });
 
-    //         vidURL = `https://static.wixstatic.com/media/${videoId}`
-    //         guestHTML = `
-    //     <a href="/guests/" class="carousel-item card-image"><img class="" src="${vidURL}"></a>
-    // `;
-    //         guestSection.innerHTML += guestHTML;
-
         }
     } catch (err) {
         console.log(err);
