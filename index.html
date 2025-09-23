@@ -10,8 +10,8 @@
         <title>VTuberland</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/main.css">
-        <link rel="stylesheet" href="../styles/nav.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/nav.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,25 +24,28 @@
         <div id="main-wrapper">
         <div id="background-filter"></div>
         <section id="anchor">
-            <div class="logos">
-                    <img src="/images/Tsumicon Logo.webp" alt=" " width="150px">
-                    <span>x</span>
-                    <img src="/images/oshilogo.webp" alt="" width="150px">
-            </div>
-            <p>Presents</p>
-            <img id='vt-anchor'src="../images/logo-large.png" alt="" width="150px">
-            <p>October 24-26</p> 
+            <img id='vt-anchor'src="images/nav-logo.png" alt="">
+            <a class="nav-link" href="#hero">Home</a>
+            <a class="nav-link" href="#featured">Panels</a>
+            <a class="nav-link" href="#meets">Meet & Greets</a>
+            <a class="nav-link" href="#partners">Partners</a>
+            <p>October 24-26</p>
             <p>Houston Marriott Westchase</p>
         </section>
-            <section id="hero">
-                
-                <div class="description">
-                    <img id="vtube-logo" src="../images/logo-large.png" alt="" >
+        <section id="hero">                
+            <div class="logos">
+                    <img class="presented-by" src="images/Tsumicon Logo.webp" alt=" " width="150px">
+                    <span>X</span>
+                    <img class="presented-by" src="images/oshilogo.webp" alt="" width="150px">
+                    <span id="presents">Presents</span>
+            </div>
+            <div class="description">
+                    <img class="hero-img" id="vtube-logo" src="images/logo-large.png" alt="" >
                     <h1>Meet. Greet. Sync.</h1>
                 </div>
-                    <img width="" id="headliners" src="../images/headlinertubers.png" alt="">
+                    <img class="hero-img" width="" id="headliners" src="images/headlinertubers.png" alt="">
             </section>
-            <div class="spacer">
+            <div class="spacer" id="partners">
                 <h2>In collaboration with:</h2>
                 <div class="logo-wrapper">
                     <img class="brand" src="https://static.wixstatic.com/media/e8c561_ea69ddd383604411b880470af8bc6c87~mv2.png" alt="">
@@ -63,15 +66,15 @@
             </section>
             <section id="footer">
                 <div>
-                    <img src="../images/logo-large.png" width="200px" alt="">
+                    <img src="images/logo-large.png" width="200px" alt="">
                 </div>
                 <p>Copyright 2025 | Vtuberland.gg | All Rights Reserved</p>
                 <div>
-                    <a href="https://www.instagram.com/tsumi.con"><img class="footer-icon" src="../images/instagram.svg" height="48px" alt=""></a>
-                    <a href="https://x.com/tsumicon"><img class="footer-icon" src="../images/x.svg" height="48px" alt=""></a>
+                    <a href="https://www.instagram.com/tsumi.con"><img class="footer-icon" src="images/instagram.svg" height="48px" alt=""></a>
+                    <a href="https://x.com/tsumicon"><img class="footer-icon" src="images/x.svg" height="48px" alt=""></a>
                 </div>
             </section>
         </div>
-        <script src="../main.js" async defer type="module"></script>
+        <script src="main.js" async defer type="module"></script>
     </body>
 </html>
