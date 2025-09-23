@@ -8,6 +8,21 @@ function extractIdAndFileType(url) {
 }
 
 let panelDiv = document.getElementById('featured');
+let meetDiv = document.getElementById('mng-roster')
+
+const popMnG = (list) => {
+    console.log(list)
+    let htmlToInject = ``
+    list.forEach((item) => {
+        if (item.type == "mng" ) {
+            let videoId = extractIdAndFileType(item.flyerImage);  
+            let vidURL = `https://static.wixstatic.com/media/${videoId}`
+            htmlToInject = `<img class="mng" src="${vidURL}">`
+            meetDiv.innerHTML += htmlToInject;
+        }
+    })      
+}
+
 
 async function getList(url, storageName) {
     try {
@@ -21,6 +36,8 @@ async function getList(url, storageName) {
             sessionStorage.removeItem(storageName);
             sessionStorage.setItem(storageName, JSON.stringify((data.items)));
             let vtubers = JSON.parse(sessionStorage.getItem('vtuberland'));
+
+            popMnG(vtubers);
             vtubers.forEach((item) => {
                 if (item.type == "panel") {
 
