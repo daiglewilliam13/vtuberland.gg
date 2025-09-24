@@ -1,0 +1,3 @@
+const featuredGuests = []
+
+export {featuredGuests};
