@@ -260,13 +260,19 @@ h2 {
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #262626;
     position: sticky;
     top: 0;
     z-index: 3;
     color: white;
     padding: 1rem 0;
+    opacity: .7;
+    transition: 200ms;
+}
+
+#anchor:hover {
+    opacity: 1;
 }
 
 #anchor p {
@@ -276,6 +282,7 @@ h2 {
     align-self: center;
     text-align: center;
     width: 100%;
+    
 }
 
 .logos {
@@ -333,6 +340,20 @@ h2 {
 #vt-anchor {
     height: 2.5rem;
     margin: auto 0;
+}
+
+.cta-button {
+    font-family: 'agency-regular';
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding:.5rem;
+    font-size: 1.5rem;
+
+}
+
+a.cta-button:visited {
+    color: black;
 }
 
 /* keyframes */
