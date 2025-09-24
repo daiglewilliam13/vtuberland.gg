@@ -11,7 +11,6 @@ let panelDiv = document.getElementById('featured');
 let meetDiv = document.getElementById('mng-roster')
 
 const popMnG = (list) => {
-    console.log(list)
     let htmlToInject = ``
     list.forEach((item) => {
         if (item.type == "mng" ) {
