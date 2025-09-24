@@ -100,10 +100,9 @@ a:visited {
     display: flex;
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 98%;
     flex-wrap: wrap;
-    margin: 1rem;
-    max-width: 900px;
+    box-sizing: border-box;
 }
 
 .panel-wrapper img {
@@ -149,17 +148,17 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1900px;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
 .mng {
     position: relative;
     z-index: 2;
-    margin: .5rem;
     width: 100%;
     max-width: 400px;
+    box-sizing: border-box;
+    padding: 1rem .5rem;
 }
 
 
@@ -171,9 +170,11 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 2500px;
+    max-width: 1920px;
     margin: 0 auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 #featured h1 {
@@ -214,7 +215,12 @@ p {
 /* meets */
 
 #meets {
+    margin: 0 auto; 
     margin-bottom: 8rem;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -365,7 +371,7 @@ h2 {
     .panel-wrapper {
         background: 000000;
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 0%);
-        width: 50%;
+        width: 49%;
     }
 
     .panel-wrapper img {
