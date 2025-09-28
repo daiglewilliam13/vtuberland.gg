@@ -428,7 +428,7 @@ a.cta-button:visited {
     }
 
     .info-wrapper p {
-        font-size: clamp(1rem, 1.5vw, 2rem);
+        font-size: clamp(.8rem, 1.3vw, 1.5rem);
     }
 
     #featured {
