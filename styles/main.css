@@ -102,6 +102,7 @@ a:visited {
     width: 98%;
     flex-wrap: wrap;
     box-sizing: border-box;
+    margin-bottom: 1rem;
 }
 
 .panel-wrapper img {
