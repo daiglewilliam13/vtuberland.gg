@@ -15,10 +15,22 @@ const popMnG = (list) => {
     list.forEach((item) => {
         if (item.type == "mng" ) {
             let videoId = extractIdAndFileType(item.flyerImage);  
-            let vidURL = `https://static.wixstatic.com/media/${videoId}`
-            htmlToInject = `<img class="mng" src="${vidURL}">`
+            let imgURL = `https://static.wixstatic.com/media/${videoId}`
+            htmlToInject = `<img class="mng" src="${imgURL}">`
             meetDiv.innerHTML += htmlToInject;
         }
+    })      
+}
+
+const popCollabs = (list) => {
+    let collabDiv = document.getElementById('collaborators');
+    let htmlToInject = ``
+    list.forEach((item) => {
+        if (item.type == "collaborator" ) {
+            let videoId = extractIdAndFileType(item.flyerImage);
+            let imgURL = `https://static.wixstatic.com/media/${videoId}`    
+            htmlToInject = `<img class="brand" src="${imgURL}">`
+            collabDiv.innerHTML += htmlToInject;}
     })      
 }
 
@@ -37,6 +49,7 @@ async function getList(url, storageName) {
             let vtubers = JSON.parse(sessionStorage.getItem('vtuberland'));
 
             popMnG(vtubers);
+            popCollabs(vtubers);
             vtubers.forEach((item) => {
                 if (item.type == "panel") {
 
