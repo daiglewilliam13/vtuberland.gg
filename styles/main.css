@@ -38,11 +38,11 @@ a:visited {
 #main-wrapper {
     height: 100vh;
     overflow: scroll;
-    background: rgb(239, 66, 250);
-    background: linear-gradient(20deg, rgba(239, 66, 250, 1) 20%, rgba(12, 248, 247, 1) 90%);
     --scroll-behavior: smooth !important;
     scroll-behavior: smooth !important;
     scroll-snap-align: end;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -60,11 +60,21 @@ a:visited {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: url('../images/background\ pattern-small.png');
+    background: rgb(239, 66, 250);
+    background: linear-gradient(20deg, rgba(239, 66, 250, 1) 20%, rgba(12, 248, 247, 1) 90%);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#pattern {
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/background\ pattern-small.png');
     background-repeat: repeat;
     opacity: .4;
-    z-index: 0;
     animation: scrolling 30s linear infinite;
+    position: relative;
+    z-index: 0;
 }
 
 #hero .description {
