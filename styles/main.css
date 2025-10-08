@@ -436,7 +436,7 @@ a.cta-button:visited {
 
     .panel-wrapper {
         background: 000000;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 0%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 0%);
         width: 49%;
     }
 
@@ -448,7 +448,7 @@ a.cta-button:visited {
 
     .info-wrapper {
         width: 49%;
-        height: 50%;
+        height: 60%;
         margin: 0;
         margin-top: auto;
         padding: 0;
